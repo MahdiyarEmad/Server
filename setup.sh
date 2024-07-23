@@ -26,13 +26,6 @@ cd /root/server
 
 # Define an array of repositories and their corresponding process names
 declare -A repos=(
-  ["Infinity"]="infinity"
-  ["MisaqDark-Bot"]="misaqdark"
-  ["FiveM-Timeplay"]="timer"
-  ["Bigezmoge-Bot"]="bigezmoge"
-  ["HajAli-Bot"]="hajali"
-  ["Crazy-Bot"]="crazy"
-  ["Hexa-Bot"]="hexa"
   ["Terminal-Bot"]="terminal"
 )
 
