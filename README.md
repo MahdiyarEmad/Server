@@ -7,5 +7,5 @@ cat ~/.ssh/id_rsa.pub
 ```
 after put your ssh key to your github use this command
 ```bash
-bash
+bash <(curl -Ls https://raw.githubusercontent.com/MTMrAlone/Server/main/setup.sh)
 ```
