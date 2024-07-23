@@ -11,7 +11,7 @@ sudo apt install -y python3 python3-full npm git
 sudo npm install -g pm2
 
 # Install Python packages
-pip3 install discord.py PyNaCl aiosqlite --break-system-packages
+pip install discord.py PyNaCl aiosqlite --break-system-packages
 
 # Set up pm2 to start on boot
 pm2 startup -s
@@ -26,6 +26,13 @@ cd /root/Server
 
 # Define an array of repositories and their corresponding process names
 declare -A repos=(
+  ["Infinity"]="infinity"
+  ["MisaqDark-Bot"]="misaqdark"
+  ["FiveM-Timeplay"]="timer"
+  ["Bigezmoge-Bot"]="bigezmoge"
+  ["HajAli-Bot"]="hajali"
+  ["Crazy-Bot"]="crazy"
+  ["Hexa-Bot"]="hexa"
   ["Terminal-Bot"]="terminal"
 )
 
