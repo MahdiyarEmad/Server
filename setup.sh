@@ -21,8 +21,8 @@ git config --global user.email "mtmralone@gmail.com"
 git config --global user.name "MTMrAlone"
 
 # Create a directory for the servers
-mkdir -p /root/server
-cd /root/server
+mkdir -p /root/Server
+cd /root/Server
 
 # Define an array of repositories and their corresponding process names
 declare -A repos=(
@@ -35,7 +35,7 @@ for repo in "${!repos[@]}"; do
   cd "/root/server/$repo"
   pm2 start start.sh --name "${repos[$repo]}" -s
   echo $repo Successfully setupped.
-  cd /root/server
+  cd /root/Server
 done
 
 # Save pm2 process list
