@@ -21,17 +21,17 @@ git config --global user.email "mtmralone@gmail.com"
 git config --global user.name "MTMrAlone"
 
 # Create a directory for the servers
-mkdir -p /root/Server
-cd /root/Server
+mkdir -p /root/server
+cd /root/server
 
 # Define an array of repositories and their corresponding process names
 declare -A repos=(
   ["Infinity"]="infinity"
   ["MisaqDark-Bot"]="misaqdark"
-  ["FiveM-Timeplay"]="timer"
+  ["FiveM-Timer"]="timer"
   ["Bigezmoge-Bot"]="bigezmoge"
   ["HajAli-Bot"]="hajali"
-  ["Crazy-Bot"]="crazy"
+#  ["Crazy-Bot"]="crazy"
   ["Hexa-Bot"]="hexa"
   ["Terminal-Bot"]="terminal"
 )
@@ -42,7 +42,7 @@ for repo in "${!repos[@]}"; do
   cd "/root/server/$repo"
   pm2 start start.sh --name "${repos[$repo]}" -s
   echo $repo Successfully setupped.
-  cd /root/Server
+  cd /root/server
 done
 
 # Save pm2 process list
