@@ -34,6 +34,7 @@ declare -A repos=(
 #  ["Crazy-Bot"]="crazy"
   ["Hexa-Bot"]="hexa"
   ["Terminal-Bot"]="terminal"
+  ["Kimia-Bot"]="kimia"
 )
 
 # Clone repositories and start pm2 processes
