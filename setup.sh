@@ -18,7 +18,7 @@ pm2 startup -s
 
 # Configure Git
 git config --global user.email "mtmralone@gmail.com"
-git config --global user.name "MTMrAlone"
+git config --global user.name "Mahdiyar Emad Server"
 
 # Create a directory for the servers
 mkdir -p /root/server
@@ -34,7 +34,7 @@ declare -A repos=(
 #  ["Crazy-Bot"]="crazy"
   ["Hexa-Bot"]="hexa"
   ["Terminal-Bot"]="terminal"
-  ["Kimia-Bot"]="kimia"
+  ["XD-Bot"]="ehsanxd"
 )
 
 # Clone repositories and start pm2 processes
