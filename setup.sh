@@ -5,13 +5,13 @@ sudo apt update
 sudo apt upgrade -y
 
 # Install necessary packages
-sudo apt install -y python3 python3-full npm git
+sudo apt install -y python3 python3-full npm git python3-pip python3-venv
 
 # Install pm2 globally
 sudo npm install -g pm2
 
 # Install Python packages
-pip install discord.py PyNaCl aiosqlite --break-system-packages
+pip install discord.py PyNaCl aiosqlite wavelink --break-system-packages
 
 # Set up pm2 to start on boot
 pm2 startup -s
@@ -26,20 +26,21 @@ cd /root/server
 
 # Define an array of repositories and their corresponding process names
 declare -A repos=(
-  ["Infinity"]="infinity"
-  ["MisaqDark-Bot"]="misaqdark"
+#  ["Infinity"]="infinity"
+#  ["MisaqDark-Bot"]="misaqdark"
   ["FiveM-Timer"]="timer"
-  ["Bigezmoge-Bot"]="bigezmoge"
-  ["HajAli-Bot"]="hajali"
+  ["Soundify"]="soundify"
+#  ["Bigezmoge-Bot"]="bigezmoge"
+#  ["HajAli-Bot"]="hajali"
 #  ["Crazy-Bot"]="crazy"
-  ["Hexa-Bot"]="hexa"
-  ["Terminal-Bot"]="terminal"
-  ["XD-Bot"]="ehsanxd"
+#  ["Hexa-Bot"]="hexa"
+#  ["Terminal-Bot"]="terminal"
+#  ["XD-Bot"]="ehsanxd"
 )
 
 # Clone repositories and start pm2 processes
 for repo in "${!repos[@]}"; do
-  git clone "git@github.com:MTMrAlone/$repo.git"
+  git clone "git@github.com:MahdiyarEmad/$repo.git"
   cd "/root/server/$repo"
   pm2 start start.sh --name "${repos[$repo]}" -s
   echo $repo Successfully setupped.
