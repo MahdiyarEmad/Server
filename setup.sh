@@ -33,7 +33,7 @@ declare -A repos=(
 
 # Clone repositories and start pm2 processes
 for repo in "${!repos[@]}"; do
-  git clone "git@github.com:MahdiyarEmad/$repo.git ${repos[$repo]}"
+  git clone "git@github.com:MahdiyarEmad/$repo.git" ${repos[$repo]}
   cd "/root/server/${repos[$repo]}"
   pm2 start start.sh --name "${repos[$repo]}" -s
   echo $repo Successfully setupped.
