@@ -26,22 +26,15 @@ cd /root/server
 
 # Define an array of repositories and their corresponding process names
 declare -A repos=(
-  ["MisaqDark-Bot"]="misaqdark"
-  ["Bigezmoge-Bot"]="bigezmoge"
-  ["CIA-Console"]="sagdas"
-  ["Hexa-Bot"]="hexa"
-  ["Getix-Bot"]="getix"
-  ["XD-Bot"]="ehsanxd"
-  ["Terminal-Bot"]="terminal"
-  ["TLF-Bot"]="rose"
-  ["Vettaz-Bot"]="vettaz"
-  ["VoralCraft-Bot"]="voralcraft"
+  ["FiveM-Timer"]="timer"
+  ["Soundify"]="soundify"
+  ["Infinity"]="infinity"
 )
 
 # Clone repositories and start pm2 processes
 for repo in "${!repos[@]}"; do
-  git clone "git@github.com:MahdiyarEmad/$repo.git"
-  cd "/root/server/$repo"
+  git clone "git@github.com:MahdiyarEmad/$repo.git ${repos[$repo]}"
+  cd "/root/server/${repos[$repo]}"
   pm2 start start.sh --name "${repos[$repo]}" -s
   echo $repo Successfully setupped.
   cd /root/server
