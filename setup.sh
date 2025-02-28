@@ -11,7 +11,7 @@ sudo apt install -y python3 python3-full npm git python3-pip python3-venv
 sudo npm install -g pm2
 
 # Install Python packages
-pip install discord.py PyNaCl aiosqlite wavelink --break-system-packages
+pip install discord.py PyNaCl aiosqlite wavelink aiomysql pytz chat_exporter persiantools --break-system-packages
 
 # Set up pm2 to start on boot
 pm2 startup -s
@@ -26,16 +26,16 @@ cd /root/server
 
 # Define an array of repositories and their corresponding process names
 declare -A repos=(
-#  ["Infinity"]="infinity"
-#  ["MisaqDark-Bot"]="misaqdark"
-  ["FiveM-Timer"]="timer"
-  ["Soundify"]="soundify"
-#  ["Bigezmoge-Bot"]="bigezmoge"
-#  ["HajAli-Bot"]="hajali"
-#  ["Crazy-Bot"]="crazy"
-#  ["Hexa-Bot"]="hexa"
-#  ["Terminal-Bot"]="terminal"
-#  ["XD-Bot"]="ehsanxd"
+  ["MisaqDark-Bot"]="misaqdark"
+  ["Bigezmoge-Bot"]="bigezmoge"
+  ["CIA-Console"]="sagdas"
+  ["Hexa-Bot"]="hexa"
+  ["Getix-Bot"]="getix"
+  ["XD-Bot"]="ehsanxd"
+  ["Terminal-Bot"]="terminal"
+  ["TLF-Bot"]="rose"
+  ["Vettaz-Bot"]="vettaz"
+  ["VoralCraft-Bot"]="voralcraft"
 )
 
 # Clone repositories and start pm2 processes
