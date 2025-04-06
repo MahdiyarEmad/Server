@@ -11,7 +11,7 @@ sudo apt install -y python3 python3-full npm git python3-pip python3-venv
 sudo npm install -g pm2
 
 # Install Python packages
-pip install discord.py PyNaCl aiosqlite wavelink aiomysql pytz chat_exporter persiantools --break-system-packages
+pip install discord.py PyNaCl aiosqlite wavelink aiomysql pytz chat_exporter persiantools twitchAPI --break-system-packages
 
 # Set up pm2 to start on boot
 pm2 startup -s
@@ -27,15 +27,20 @@ cd /root/server
 # Define an array of repositories and their corresponding process names
 declare -A repos=(
   ["FiveM-Timer"]="timer"
-  ["Soundify"]="soundify"
   ["Infinity"]="infinity"
+  ["Bigezmoge-Bot"]="bigezmoge"
+  ["Vettaz-Bot"]="vettaz"
+  ["KingDom-Bot"]="kingdom"
+  ["Getix-Bot"]="getix"
+  ["VoralCraft-Bot"]="voralcraft"
+  ["MisaqDark-Bot"]="misaqdark"
 )
 
 # Clone repositories and start pm2 processes
 for repo in "${!repos[@]}"; do
   git clone "git@github.com:MahdiyarEmad/$repo.git" ${repos[$repo]}
   cd "/root/server/${repos[$repo]}"
-  pm2 start start.sh --name "${repos[$repo]}" -s
+  pm2 start main.py --name "${repos[$repo]}" -s
   echo $repo Successfully setupped.
   cd /root/server
 done
