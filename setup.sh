@@ -17,7 +17,7 @@ pip install discord.py PyNaCl aiosqlite wavelink aiomysql pytz chat_exporter per
 pm2 startup -s
 
 # Configure Git
-git config --global user.email "mtmralone@gmail.com"
+git config --global user.email "imahdiyaremad@gmail.com"
 git config --global user.name "Mahdiyar Emad Server"
 
 # Create a directory for the servers
