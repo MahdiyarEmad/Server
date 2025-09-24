@@ -28,12 +28,8 @@ cd /root/server
 declare -A repos=(
   ["FiveM-Timer"]="timer"
   ["Infinity"]="infinity"
-  ["Bigezmoge-Bot"]="bigezmoge"
-  ["Vettaz-Bot"]="vettaz"
-  ["KingDom-Bot"]="kingdom"
-  ["Getix-Bot"]="getix"
-  ["VoralCraft-Bot"]="voralcraft"
-  ["MisaqDark-Bot"]="misaqdark"
+  ["Soundify"]="soundify"
+  ["Terminal-Bot"]="terminal"
 )
 
 # Clone repositories and start pm2 processes
